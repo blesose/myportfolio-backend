@@ -191,7 +191,7 @@ const corsOptions = {
     origin: function (origin, callback) {
         const allowedOrigins = [
             process.env.FRONTEND_URL || 'http://localhost:5173',
-            'https://myportfolio-frontend-black.vercel.app'
+            'https://myportfolio-frontend-black.vercel.app/'
         ];
         
         // Allow requests with no origin (like mobile apps or Postman)
