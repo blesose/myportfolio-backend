@@ -33,7 +33,6 @@ logs/
 package-lock.json
 yarn.lock
 #Build output
-public/
 
 # Testing
 coverage/
