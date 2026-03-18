@@ -30,8 +30,8 @@ class EmailService {
             // Base transporter configuration
             const transporterConfig = {
                 host: 'smtp.gmail.com',
-                port: 465,
-                secure: true,
+                port: 587,
+                secure: false,
                 auth: {
                     user: process.env.EMAIL_USER,
                     pass: process.env.EMAIL_PASS
@@ -60,8 +60,8 @@ class EmailService {
 
             console.log('📧 Configuring email with:', {
                 host: 'smtp.gmail.com',
-                port: 465,
-                secure: true,
+                port: 587,
+                secure: false,
                 user: process.env.EMAIL_USER,
                 hasPassword: !!process.env.EMAIL_PASS,
                 mode: isProduction ? 'production (IPv4 forced)' : 'development (auto)'

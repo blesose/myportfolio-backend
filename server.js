@@ -63,8 +63,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/contact", contactRouter);
 app.use("/api/chat", chatRouter);
 app.use("/api/projects", projectRouter);
-app.use("/api/admin", adminRouter);
 app.use("/api/resume", resumeRouter);
+
+app.use("/api/admin", adminRouter);
 
 // Health check
 app.get("/api/health", (req, res) => {
