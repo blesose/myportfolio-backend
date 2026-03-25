@@ -60,7 +60,7 @@ class EmailService {
 
             console.log('📧 Configuring email with:', {
                 host: 'smtp.gmail.com',
-                port: 465,
+                port: 587,
                 secure: true,
                 user: process.env.EMAIL_USER,
                 hasPassword: !!process.env.EMAIL_PASS,
