@@ -78,6 +78,15 @@ app.get("/api/health", (req, res) => {
     });
 });
 
+app.get('/api/test-email', async (req, res) => {
+  try {
+    const emailService = require('./services/emailService');
+    await emailService.sendContactConfirmation(process.env.EMAIL_USER, 'Test User');
+    res.json({ success: true, message: 'Test email sent, check logs' });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
 // Root route
 app.get("/", (req, res) => {
     res.json({

@@ -383,6 +383,7 @@ class EmailService {
             return false;
         }
     }
+    
 }
 
 module.exports = new EmailService();
