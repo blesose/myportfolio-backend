@@ -80,7 +80,7 @@ app.get("/api/health", (req, res) => {
 
 app.get('/api/test-email', async (req, res) => {
   try {
-    const emailService = require('./services/emailService');
+    const emailService = require('./src/utils/emailService');
     await emailService.sendContactConfirmation(process.env.EMAIL_USER, 'Test User');
     res.json({ success: true, message: 'Test email sent, check logs' });
   } catch (error) {
